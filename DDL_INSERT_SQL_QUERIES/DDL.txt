@@ -1,0 +1,160 @@
+-> create schema project;
+
+-> set search_path to project;
+
+1) LOCATION TABLE
+-> create table location(
+pincode int primary key,
+area varchar(50),
+city varchar(50),
+state varchar(50)
+);
+
+2) PATIENT TABLE
+-->Create table patient(
+patient_id varchar(10) primary key, 
+name varchar(50) not null, 
+email varchar(100) not null,
+gender char(1) not null,
+plot_no varchar(10),
+pincode int,
+society varchar(50),
+FOREIGN KEY (pincode) REFERENCES location(pincode) on delete cascade
+);
+
+3) PATIENTNUMBER TABLE
+-->Create table patientnumber(
+patient_id varchar(10),
+mobile_number varchar(10),
+primary key(patient_id,mobile_number),
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id) on delete cascade
+);
+
+4) MEDICALSHOP TABLE
+--> Create table medicalshop(
+shop_id varchar(10) primary key,
+shop_no varchar(10),
+shop_name varchar(50) not null,
+email varchar(50),
+pincode int not null,
+society varchar(50),
+FOREIGN KEY (pincode) REFERENCES location(pincode) on delete cascade
+);
+
+5) SHOPNUMBER TABLE
+-->Create table shopnumber(
+shop_id varchar(10),
+mobile_number varchar(10),
+primary key(shop_id, mobile_number),
+FOREIGN KEY (shop_id) REFERENCES medicalshop(shop_id) on delete cascade
+);
+
+6) DOCTOR TABLE
+--> Create table doctor(
+doctor_id varchar(10) primary key,
+name varchar(50) not null,
+email varchar(50) not null,
+specialization varchar(50)
+);
+
+7)DOCTORNUMBER TABLE
+Create table doctornumber(
+doctor_id varchar(10),
+mobile_number varchar(10),
+primary key(doctor_id, mobile_number),
+FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) on delete cascade
+);
+
+8) APPOINTMENT TABLE
+--> create  table appointment(
+appointment_id varchar(10) primary key,
+doctor_id varchar(10),
+patient_id varchar(10),
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id) on delete cascade,
+FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) on delete cascade 
+)
+
+9)NGO TABLE
+--> CREATE TABLE ngo (
+ngo_id varchar(10) primary key,
+name varchar(20) not null,
+society varchar(50),
+pincode int not null,
+amount_donated numeric(10,2),
+patient_id varchar(10),
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id) on delete cascade
+);
+
+10)DELIVERYTEAM TABLE
+--> Create table deliveryteam(
+name varchar(50) not null,
+dmobile_no varchar(10) primary key,
+email varchar(50) not null
+);
+
+11)PRODUCTS TABLE 
+--> create table products(
+product_id varchar(10) primary key,
+name varchar(50) not null,
+description varchar(50) not null,  
+price_per_unit numeric(10,2) not null
+);
+
+12)ORDERSPLACED TABLE
+-->create table ordersplaced(
+order_id varchar(10) primary key,
+shop_id varchar(10),
+patient_id varchar(10),
+order_date date,
+total_amount numeric(10,2),
+FOREIGN KEY (shop_id) REFERENCES medicalshop(shop_id) on delete cascade,
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id) on delete cascade
+);
+
+13)ORDERDETAILS TABLE
+--> create table orderdetails(
+orderdetail_id varchar(10) primary key,
+order_id varchar(10),
+product_id varchar(10),
+price_per_product numeric(10,2),
+product_qty int,
+amount numeric(10,2),
+FOREIGN KEY (product_id) REFERENCES products(product_id) on delete cascade,
+FOREIGN KEY (order_id) REFERENCES ordersplaced(order_id) on delete cascade
+);
+
+14)ITEMTODELIVER TABLE
+-->create table itemtodeliver(
+package_id varchar(10) primary key,
+order_id varchar(10),
+patient_id varchar(10),
+dmobile_no varchar(10),
+FOREIGN KEY (order_id) REFERENCES ordersplaced(order_id) on delete cascade,
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id) on delete cascade,
+FOREIGN KEY (dmobile_no) REFERENCES deliveryteam(dmobile_no) on delete cascade 
+);
+
+15)SHOPSTOCK TABLE
+-->create table shopstock(
+shopstock_id varchar(10) primary key,
+shop_id varchar(10),
+product_id varchar(10),
+qty int,
+FOREIGN KEY (shop_id) REFERENCES medicalshop(shop_id) on delete cascade,
+FOREIGN KEY (product_id) REFERENCES products(product_id) on delete cascade 
+);
+
+16)BILLINVOICE TABLE
+-->CREATE TABLE billinvoice (
+invoice_id varchar(10) primary key,
+date date not null,
+shop_id varchar(10),
+patient_id varchar(10),
+order_id varchar(10),
+amount numeric(10,2),
+FOREIGN KEY (patient_id) REFERENCES patient(patient_id)on delete
+cascade,
+FOREIGN KEY (order_id) REFERENCES ordersplaced(order_id) on delete cascade,
+FOREIGN KEY (shop_id) REFERENCES medicalshop(shop_id) on delete
+cascade
+);

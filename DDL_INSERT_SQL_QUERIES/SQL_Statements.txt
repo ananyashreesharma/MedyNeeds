@@ -1,0 +1,145 @@
+1)  list the id, name of patient and doc who have taken the appointment where id='p001'.
+
+set search_path to project;
+select ap.patient_id,p.name,ap.doctor_id,d.name from patient as p,doctor as d,appointment as ap
+where ap.patient_id='p001' and
+ap.patient_id = p.patient_id and 
+ap.doctor_id = d.doctor_id;
+
+2)  list the total available products on the shop_id = "sp001", where qty more than 10
+
+select ss.product_id,ss.qty,sp.shop_name from shopstock as ss
+join medicalshop as sp on (ss.shop_id=sp.shop_id)
+where sp.shop_id = 'sp001' and 
+ss.qty > 100;
+
+3) list the orders which are yet to be delivered.
+
+select ord.order_id from orderdetails as ord
+EXCEPT
+select ite.order_id from itemtodeliver as ite;
+
+4) List (product id, product name, category) of top 3 most sold item based on quantity
+
+select product_id, name, price_per_unit from products 
+Order by price_per_unit desc limit 3;
+
+5)  List the product details which are medicine for the cough.
+
+select product_id,name,description from products where description like '%cough%';
+
+6) update all the price of the products by 20 percent and display the result. 
+
+update products
+set price_per_unit = price_per_unit + ((price_per_unit)*20/100);
+select name,price_per_unit from products;
+
+7) show the highest amount donated to the NGO from each city.
+
+SELECT l.city, MAX(amount_donated) AS "Highest Donation" 
+FROM location as l
+inner join ngo as n on(l.pincode=n.pincode)
+GROUP BY city;
+
+8) List the id,name of female patient and doctor with specialization in surgery.
+
+SELECT patient_id,name
+FROM patient
+where gender='f'
+UNION
+SELECT doctor_id,name
+FROM doctor
+where specialization like '%surgery%';
+
+9) List all the patients who have ordered atleast twice
+
+select distinct o1.patient_id from ordersplaced as o1,ordersplaced as o2
+where o1.patient_id=o2.patient_id and o1.order_id <> o2.order_id;
+
+10) List all the patients who have ordered from the same city.
+
+Select distinct name,shop_name,pa.city from patient as p
+inner join location as pa on p.pincode=pa.pincode 
+inner join ordersplaced as op on p.patient_id=op.patient_id
+inner join medicalshop as ms on pa.pincode=ms.pincode
+where p.pincode=ms.pincode;
+
+11) list the total numbers of orders of the customer whose package has been delivered
+
+select distinct patient_id,count(order_id) from ordersplaced 
+group by patient_id having patient_id in (select patient_id from itemtodeliver);
+
+12) List the total sales by shop id sp015
+
+select distinct m.shop_id,op.order_id,p.name,od.product_id,od.product_qty
+from medicalshop as m inner join ordersplaced as op on(op.shop_id = m.shop_id)
+inner join orderdetails as od on (od.order_id = op.order_id)
+inner join products as p on(od.product_id = p.product_id)
+where m.shop_id = 'sp015';
+
+13)  list the names patients who have more than one mobile number
+
+select distinct name from patient as p where p.patient_id in(
+select patient_id from patientnumber
+group by patient_id having count(*)>1 );
+
+14) list the names patients who have more than one mobile number and their item to delivery team 
+--id dm001 and dm005
+
+select distinct pn.patient_id, pn.mobile_number, dl.dmobile_no from patientnumber as pn
+inner join itemtodeliver as it on(pn.patient_id = it.patient_id)
+inner join  deliveryteam as dl on(dl.dmobile_no = it.dmobile_no)
+where dl.dmobile_no in ('7425981365','7496325815');
+
+15) get all the invoice details of shop id '002' and display the name of shop and patient
+
+select inv.invoice_id, inv.shop_id,md.shop_name,inv.patient_id,pat.name from billinvoice as inv
+inner join medicalshop as md on(inv.shop_id = md.shop_id)
+inner join patient as pat on(inv.patient_id = pat.patient_id)
+where md.shop_id = 'sp002';
+
+20) list the patient who have donated into the ngo id: 001
+
+select p.name,n.amount_donated from patient as p
+inner join ngo as n on (p.patient_id=n.patient_id)
+where n.ngo_id='ngo001';
+
+21) list the patient who have donated into more than once
+
+select distinct patient_id,count(*) from ngo
+group by patient_id having count(*)>1;
+
+22) list the top 3 patients who have ordered the maximum time
+
+select p.name, count(*) from patient as p
+inner join ordersplaced as op on(p.patient_id=op.patient_id)
+group by p.patient_id order by count(*) desc limit 3 ;
+
+23) show the doctors who have done specialization in kidney or surgery
+
+select * from doctor where specialization in('kidney specialist', 'surgery');
+
+24) display the shop_id(details) who have got maximum qty of the product_id = 'Pd006'
+
+select * from medicalshop where shop_id in
+(select shop_id from shopstock where product_id='pd005'
+group by shopstock_id order by (qty) desc limit 1
+);
+
+25) show the medical shops in the area between 390009 to area of 391330
+
+select * from medicalshop
+where pincode between 390009 and 391330;
+
+
+26) list the max price of the product and name of it
+
+select name,price_per_unit from products where price_per_unit=(select max(price_per_unit) from products)
+
+27) list the min price of the product and name of it
+
+select name,price_per_unit from products where price_per_unit=(select min(price_per_unit) from products)
+
+
+
+

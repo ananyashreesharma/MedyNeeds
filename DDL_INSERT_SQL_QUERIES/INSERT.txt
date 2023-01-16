@@ -1,0 +1,349 @@
+1)LOCATION TABLE
+insert into location(pincode, area, city, state) values(382120,'Abasana','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(382220,'Adroda','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(382460,'Adval','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(382250,'Akru','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(363610,'Alampur','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(382255,'Alau','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(387810,'Ambaliara','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(382450 ,'Bela','Ahmedabad','Gujarat');
+insert into location(pincode, area, city, state) values(380060, 'Bhadaj','Ahmedabad','Gujarat'); 
+insert into location(pincode, area, city, state) values(390009,'Sharadnagar','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391530,'Sihora','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391150,'Shira','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391110,'Simalia','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391105,'Simli','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391244,'Simri','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391330,'Sindhrot','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(391168,'Singla','Vadodara','Gujarat');
+insert into location(pincode, area, city, state) values(382321,'Chhala','Gandhi Nagar','Gujarat');
+insert into location(pincode, area, city, state) values(382729,'Chhatral','Gandhi Nagar','Gujarat');
+insert into location(pincode, area, city, state) values(382042,'Crpf Campus g nagar','Gandhi Nagar','Gujarat');
+insert into location(pincode, area, city, state) values(382355,'Dabhoda','Gandhi Nagar','Gujarat');
+insert into location(pincode, area, city, state) values(382305,'Dehgam','Gandhi Nagar','Gujarat');
+insert into location(pincode, area, city, state) values(380015,'Ambawadi Vistar','Gandhi Nagar','Gujarat');
+
+
+2)DOCTOR TABLE
+insert into doctor(doctor_id,name,email,specialization) values('d001', 'Anuj', 'anujdoc@gmail.com','surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d002', 'Parth', 'parthdoc@yahoo.com','kidney specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d003', 'Gaurav', 'gauravdoc@yahoo.com','kidney specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d004', 'Jaimil', 'jaimildoc@gmail.com', 'heart surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d005', 'shanvi', 'shanvidoc@yahoo.com','surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d006', 'Atharva', 'atharvadoc@yahoo.com','root canal');
+insert into doctor(doctor_id,name,email,specialization) values('d007', 'bhavya', 'bhavyadoc@yahoo.com','skin specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d008', 'nilay', 'nilaydoc@yahoo.com',  'heart surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d009', 'Sambit', 'sambitdoc@gmail.com','kidney specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d010', 'nidhi', 'nidhidoc@yahoo.com','root canal');
+insert into doctor(doctor_id,name,email,specialization) values('d011', 'hardik', 'hardikdoc@yahoo.com', 'brain surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d012', 'Tanusha', 'tanushadoc@gmail.com','skin specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d013', 'pranav', 'pranavdoc@yahoo.com', 'kidney specialist');
+insert into doctor(doctor_id,name,email,specialization) values('d014', 'krishna', 'krishnadoc@yahoo.com',  'brain surgery');
+insert into doctor(doctor_id,name,email,specialization) values('d015', 'lavneet', 'lavneetdoc@yahoo.com', 'root canal');
+
+3)DOCTORNUMBER TABLE
+insert into doctornumber(doctor_id,mobile_number) values('d001',  '7789986767');
+insert into doctornumber(doctor_id,mobile_number) values('d002', '7756936267');
+insert into doctornumber(doctor_id,mobile_number) values('d003',  '9996976267');
+insert into doctornumber(doctor_id,mobile_number) values('d004',  '775687267');
+insert into doctornumber(doctor_id,mobile_number) values('d005', '8780989764');
+insert into doctornumber(doctor_id,mobile_number) values('d006', '9927675787');
+insert into doctornumber(doctor_id,mobile_number) values('d007',  '8990997654');
+insert into doctornumber(doctor_id,mobile_number) values('d008',  '8890936267');
+insert into doctornumber(doctor_id,mobile_number) values('d009',  '9956936267');
+insert into doctornumber(doctor_id,mobile_number) values('d010',  '9956938898');
+insert into doctornumber(doctor_id,mobile_number) values('d011',  '7755676267');
+insert into doctornumber(doctor_id,mobile_number) values('d012',  '7733336267');
+insert into doctornumber(doctor_id,mobile_number) values('d013', '9956937267');
+insert into doctornumber(doctor_id,mobile_number) values('d014',  '8556936267');
+insert into doctornumber(doctor_id,mobile_number) values('d015',  '9899936267');
+
+4)PATIENT
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society) values('p001' , 'Jaya', 'jaya@gmail.com', 'f', '305', 390009, 'Sharadnagar');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p002' , 'Saurabh', 'saurabh@gmail.com', 'm', 'B-112', 382220, 'yashodanagar');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p003' , 'Kartik', 'kartik@gmail.com', 'm','221',382460, 'akshar soc');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p004' , 'Chhavi', 'chhavi@gmail.com', 'f','A-15', 382250, 'Shamal soc' );
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p005' , 'Sakshu', 'sakshu@gmail.com', 'm','B-14', 363610, 'navrangpura');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p006' , 'Deblina', 'deblina@gmail.com', 'f','227', 390009, 'Sharadnagar');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p007' , 'Harshit', 'harshit@gmail.com', 'm','sector 23', 382255, 'Sussen soc');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p008' , 'Bhavesh', 'bhavesh@gmail.com', 'm','sector 21', 387810, 'Baps flats');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p009' , 'Hitesh', 'hitesh@gmail.com', 'm','sector 19', 391330, 'shyam soc');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p010' , 'Manish', 'manish@gmail.com', 'm','C-55', 391530, 'varachia soc');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p011' , 'Shivani', 'shivani@gmail.com', 'f', '305', 391150,'Adajan flats');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p012' , 'Snehil', 'snehil@gmail.com', 'm','A-07', 382321, 'rangeen soc');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p013' , 'Tanvi', 'tanvi@gmail.com', 'f','AB-445', 382729, 'shyam flats');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p014' , 'Vansh', 'vansh@gmail.com', 'm','D-405', 382355, 'sundar flats');
+Insert into patient(patient_id, name, email,gender,plot_no,pincode,society)  values('p015' , 'Sarthak', 'sarthak@gmail.com', 'm','205', 382042, 'gokuldham soc');
+
+
+5)APPOINTMENT TABLE
+insert into appointment(appointment_id, doctor_id,patient_id )values('a001', 'd001','p001');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a002', 'd002','p002');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a003', 'd015','p003');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a004', 'd010','p005');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a005', 'd001','p004');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a006', 'd002','p011');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a007', 'd001','p010');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a008', 'd011','p012');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a009', 'd015','p013');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a010', 'd015','p008');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a011', 'd001','p009');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a012', 'd009','p014');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a013','d001','p015');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a014', 'd011','p011');
+insert into appointment(appointment_id, doctor_id,patient_id )values('a015', 'd001','p012');
+
+6)DELIVERYTEAM TABLE
+insert into deliveryteam( name, dmobile_no, email)values('sushil','7890541236','sushil@gmail.com');
+insert into deliveryteam(name, dmobile_no, email)values( 'raju','7896543211','raju@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'sakshi','7418527633','sakshi@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('shivani','7898745424','shivani@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'aryan','7418529633','aryan@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'devansh','7896541236','devansh@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('shaurya','7536984125','shaurya@gmail.com');
+insert into deliveryteam(name, dmobile_no, email)values( 'ananyashree','9999997899','shree@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('rutvi','797624125','rutvi@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('rajat','805876247','rajat@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'kartavya','7458963125','kart@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'muskan','7489651355','muskan@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('kopal','7419632586','kopal@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values('kareena','7496325815','kareena@gmail.com');
+insert into deliveryteam( name, dmobile_no, email)values( 'rakul','7425981365','rakul@gmail.com');
+
+
+7)MEDICALSHOP TABLE
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp001','Apollo','1076','apollo@gmail.com','Mansarovar',382220);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp002','PharmEasy','1078','pharmeasy@gmail.com','MalviyaNagar',382460);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp003','Walgreens','1080','walgreens@gmail.com','GopalPura',382250);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp004','Hello','1253','hello@gmail.com','Mayapuri',382450);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp005','PharmmedsAid','1092','pharmmeds@gmail.com','VashaliNagar',380060);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp006','CVS','1099','cvs@gmail.com','JlN Marg',390009);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp007','LongsDrugs','1099','lonsdrugs@gmail.com','Model Town',391330);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp008','Buller','1020','Buller@gmail.com','Atish Market',391530);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp009','RiteAid','1092','riteaid@gmail.com','Vashali',391168);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp010','Kerr','1098','kerrdrugs@gmail.com','Calgiri',391330);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp011','Arbor','1095','arbordrugs@gmail.com','City',391530);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp012','Avlon','1002','avloanchemists@gmail.com','TonakRoad',380015);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp013','Duane','1092','duanereaded@gmail.com','TrivaniNagar',382305);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp014','Thrifty','1085','thrifty@gmail.com','RiddhiSiddhi',382321);
+insert into medicalshop(shop_id,shop_name,shop_no,email,society,pincode)
+values('sp015','BigB','1063','bigb@gmail.com','Satkar',382355);
+
+
+8)SHOPNUMBER TABLE
+insert into shopnumber(shop_id,mobile_number) values('sp001','9556976254');
+insert into shopnumber(shop_id,mobile_number) values('sp002','9652656654');
+insert into shopnumber(shop_id,mobile_number) values('sp003','9655565654');
+insert into shopnumber(shop_id,mobile_number) values('sp004','7985989554');
+insert into shopnumber(shop_id,mobile_number) values('sp005','9655656654');
+insert into shopnumber(shop_id,mobile_number) values('sp006','9656569654');
+insert into shopnumber(shop_id,mobile_number) values('sp007','9696356654');
+insert into shopnumber(shop_id,mobile_number) values('sp008','9556976254');
+insert into shopnumber(shop_id,mobile_number) values('sp009','9668956654');
+insert into shopnumber(shop_id,mobile_number) values('sp010','9789654321');
+insert into shopnumber(shop_id,mobile_number) values('sp011','9987537472');
+insert into shopnumber(shop_id,mobile_number) values('sp012','9099865432');
+insert into shopnumber(shop_id,mobile_number) values('sp013','9099087654');
+insert into shopnumber(shop_id,mobile_number) values('sp014','9236484933');
+insert into shopnumber(shop_id,mobile_number) values('sp015','9946537532');
+
+
+9)PRODUCT TABLE
+Insert into products(product_id,name,description,price_per_unit) values('pd001' , 'Dopamine' , ' low blood pressure'  , 120 );
+Insert into products(product_id,name,description,price_per_unit) values('pd002' , 'Aspirin' , 'pain and fever',  100 );
+Insert into products(product_id,name,description,price_per_unit) values('pd003' , 'Dextromethorphan' , ' cough' ,  125 );
+Insert into products(product_id,name,description,price_per_unit) values('pd004' , 'Pindolo' , ' Hyper Tension' ,  130 );
+Insert into products(product_id,name,description,price_per_unit) values('pd005' , 'Antihistamine eyedrops' ,' red eyes' , 500 );
+Insert into products(product_id,name,description,price_per_unit) values('pd006' , 'Carbinoxamine' , ' runny nose' ,  620 );
+Insert into products(product_id,name,description,price_per_unit) values('pd007' , 'Celiprolol' , ' Hyper Tension' ,  300 );
+Insert into products(product_id,name,description,price_per_unit) values('pd008' , 'Paracetamol' , ' fever' ,  175 );
+Insert into products(product_id,name,description,price_per_unit)values('pd009' , 'Visine A' , ' Eye Drops' ,  245 );
+Insert into products(product_id,name,description,price_per_unit) values('pd010' , 'Metoprolol' , ' Hyper Tension' ,  545);
+Insert into products(product_id,name,description,price_per_unit) values('pd011' , 'Farxiga' , ' diabetes' ,  324);
+Insert into products(product_id,name,description,price_per_unit) values('pd012' , 'Halfprin' , ' fever ' ,  100 );
+Insert into products(product_id,name,description,price_per_unit) values('pd013' , 'Citalopram' , ' Depression ' ,  200 );
+Insert into products(product_id,name,description,price_per_unit) values('pd014' , 'Hydroxychloroquine' , ' Malaria ' ,  670 );
+Insert into products(product_id,name,description,price_per_unit) values('pd015' , 'Acetaminophen' , ' Dengue' ,  800 );
+
+10)PATIENTNUMBER TABLE
+insert into patientnumber(patient_id, mobile_number)values('p001', '8559851910');
+insert into patientnumber(patient_id, mobile_number)values('p001', '7559851912');
+insert into patientnumber(patient_id, mobile_number)values('p002', '8559856932');
+insert into patientnumber(patient_id, mobile_number)values('p002', '8558712347');
+insert into patientnumber(patient_id, mobile_number)values('p003', '8559857177');
+insert into patientnumber(patient_id, mobile_number)values('p003', '7782301911');
+insert into patientnumber(patient_id, mobile_number)values('p004', '8559857177');
+insert into patientnumber(patient_id, mobile_number)values('p004', '7855987456');
+insert into patientnumber(patient_id, mobile_number)values('p005', '8559853178');
+insert into patientnumber(patient_id, mobile_number)values('p006', '7782301911');
+insert into patientnumber(patient_id, mobile_number)values('p007', '8550001234');
+insert into patientnumber(patient_id, mobile_number)values('p007', '8559851442');
+insert into patientnumber(patient_id, mobile_number)values('p008', '7757051234');
+insert into patientnumber(patient_id, mobile_number)values('p008', '7559851547');
+insert into patientnumber(patient_id, mobile_number)values('p009', '8512347896');
+insert into patientnumber(patient_id, mobile_number)values('p010', '8557896544');
+insert into patientnumber(patient_id, mobile_number)values('p010', '7559751472');
+insert into patientnumber(patient_id, mobile_number)values('p011', '8559856932');
+insert into patientnumber(patient_id, mobile_number)values('p011', '7412589636');
+insert into patientnumber(patient_id, mobile_number)values('p012', '7418529632');
+insert into patientnumber(patient_id, mobile_number)values('p013', '8050401204');
+insert into patientnumber(patient_id, mobile_number)values('p013', '8010203040');
+insert into patientnumber(patient_id, mobile_number)values('p014', '7080904050');
+insert into patientnumber(patient_id, mobile_number)values('p014', '8090101112');
+insert into patientnumber(patient_id, mobile_number)values('p015', '8550001234');
+insert into patientnumber(patient_id, mobile_number)values('p015', '7418596007');
+
+
+11)SHOPSTOCK TABLE
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st001','sp001','pd001',150);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st002','sp002','pd001',150);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st003','sp003','pd001',150);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st004','sp004','pd002',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st005','sp005','pd002',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st006','sp006','pd002',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st007','sp007','pd003',500);  
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st008','sp008','pd003',500);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st009','sp009','pd003',500);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st010','sp010','pd004',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st011','sp011','pd004',100);   
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st012','sp012','pd004',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st013','sp013','pd005',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st014','sp014','pd005',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st015','sp015','pd005',400);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st016','sp001','pd006',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st017','sp002','pd006',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st018','sp003','pd006',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st019','sp004','pd007',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st020','sp005','pd007',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st021','sp006','pd007',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st022','sp007','pd008',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st023','sp008','pd008',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st024','sp009','pd008',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st025','sp010','pd009',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st026','sp011','pd009',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st027','sp012','pd009',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st028','sp013','pd010',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st029','sp014','pd010',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st030','sp015','pd010',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st031','sp001','pd011',300);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st032','sp002','pd011',300);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st033','sp003','pd011',300);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st034','sp004','pd012',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st035','sp005','pd012',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st036','sp006','pd012',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st037','sp007','pd013',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st038','sp008','pd013',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st039','sp009','pd013',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st040','sp010','pd014',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st041','sp011','pd014',50);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st042','sp012','pd014',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st043','sp013','pd015',100);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st044','sp014','pd015',200);
+insert into shopstock (shopstock_id,shop_id,product_id,qty) values('st045','sp015','pd015',200);
+
+12)NGO TABLE
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo001' , 'udaan' , 'shyamal' , '382220' ,  '20000' , 'p001');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo002' , 'smile' , 'shivranjani' , '382460' ,  '30000' , 'p002');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo003' , 'goonj' , 'bopal' , '382250' ,  '40000'  , 'p003');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo004' , 'deepalaya' , 'naranpura' , '363610' ,  '50000'  , 'p004');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo005' , 'uday' , 'navrangpur' , '382255' ,  '60000'  , 'p005');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo006' , 'peace' , 'sindhu bhavan' , '390009' ,  '70000'  , 'p006');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo007' , 'save more' , 'sg highway' , '391330' ,  '80000'  , 'p007');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo008' , 'donation nation' , 'narol' , '391530' ,  '90000'  , 'p008');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo009' , 'raise' , 'naroda' , '391150' ,  '10000'  , 'p009');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo010' , 'fortune' , 'bodakdev' , '391110' ,  '22000'  , 'p010');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo011' , 'sunshine' , 'prahladnagar' , '382321' ,  '23000'  , 'p011');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo012' , 'give life' , 'motera' , '382729' ,  '24000'  , 'p012');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo013' , 'joy makers' , 'sabarmati' , '382355' ,  '25000'  , 'p013');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo014' , 'hope' , 'chandkheda' , '382042' ,  '26000'  , 'p014');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo015' , 'love' , 'vadaj' , '382355' , '27000' , 'p015');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo016' , 'spread peace', 'naranpura' , '363610' ,  '24000'  , 'p004');
+insert into ngo(ngo_id,name,society,pincode,amount_donated,patient_id) values ('ngo017' , 'saaar' , 'sg highway' , '391330' ,  '60000'  , 'p007');
+
+
+13)ORDERSPLACED TABLE
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or001', 'sp001', 'p001', '2021-10-15', 30.00);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or002', 'sp002', 'p011', '2021-07-21', 27.78);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or003', 'sp003', 'p006', '2021-03-30', 7.25);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or004', 'sp004', 'p007', '2021-06-18', 8.00);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or005', 'sp005', 'p007',  '2021-04-11', 16.00);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or006', 'sp007', 'p003',  '2021-08-01', 65.14);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or007', 'sp008',  'p013', '2021-03-09', 6.75);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or008', 'sp006', 'p007', '2021-08-19', 12.00);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or009', 'sp001', 'p006', '2021-08-14', 43.3);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or010', 'sp009', 'p012',  '2021-08-25', 18.00);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or011', 'sp010', 'p015', '2021-10-10', 25.38);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or012', 'sp011',  'p002', '2021-01-20', 44.97);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or013', 'sp002','p004', '2021-02-23', 4.83);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or014', 'sp015', 'p009', '2021-05-29', 31.63);
+insert into ordersplaced(order_id,shop_id,patient_id,order_date,total_amount) values('or015', 'sp006',  'p011' ,'2021-02-05', 10.00);
+
+
+
+14)ORDERDETAILS TABLE
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol001','or001', 'pd001', 120, 8,960);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol002','or002', 'pd011', 324, 10,3240);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol003','or003', 'pd006', 620, 5,3100);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol004','or004',  'pd007', 300, 4,1200);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol005','or005',  'pd007', 300,8 ,2400);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol006','or006', 'pd003', 125,5 ,625);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol007','or006', 'pd008', 175, 6,1050);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol008','or007',  'pd013', 200, 9,1800);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol009','or008', 'pd007', 300, 6,1800);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol010','or009',  'pd006', 620, 12,7440); 
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol011','or009',  'pd001',  120, 10,1200);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol012','or010',  'pd012', 100, 6,600);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol013','or011',  'pd004', 130, 11,1430); 
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol014','or011',  'pd009', 245, 16,3920);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol015','or012',  'pd014', 670, 6,4020);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol016','or013', 'pd006',  620,10, 6200);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol017','or014',  'pd015', 800, 9,7200);
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol018','or014',  'pd010', 545, 12,6540); 
+insert into orderdetails(orderdetail_id,order_id,product_id,price_per_product,product_qty,amount) values('ol019','or014',  'pd005', 670, 8,5360);
+
+
+15)BILLINVOICE TABLE
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv001','2021-10-15','sp001','p001','or001',30);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv002','2021-07-21','sp002','p011','or002',27.78);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv003','2021-03-30','sp003','p006','or003',7.25);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv004','2021-06-18','sp004','p007','or004',8.00);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv005','2021-04-11','sp005','p007','or005',16.00);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv006','2021-08-01','sp007','p003','or006',65.14);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv007','2021-03-09','sp008','p013','or007',6.75);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv008','2021-08-19','sp006','p007','or003',12.00);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv009','2021-08-14','sp001','p006','or009',43.3);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv010','2021-08-25','sp009','p012','or010',18.00);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv011','2021-10-10','sp010','p015','or011',25.38);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv012','2021-01-20','sp011','p002','or012',44.97);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv013','2021-02-23','sp002','p004','or013',4.83);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv014','2021-05-29','sp015','p009','or014',31.63);
+insert into billinvoice(invoice_id,date,shop_id,patient_id,order_id,amount) values('inv015','2021-02-05','sp006','p011','or015',10.00);
+
+
+16)ITEMTODELIVER TABLE
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk001','or001','p001','7419632586');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk002','or002','p011','9999997899');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk003','or003','p006','9999997899');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk004','or004','p007','7419632586');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk005','or005','p007','797624125');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk006','or006','p003','9999997899');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk007','or007','p013','9999997899');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk008','or008','p007','7425981365');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk009','or009','p006','797624125');
+insert into itemtodeliver(package_id,order_id,patient_id,dmobile_no)values('pk010','or010','p012','797624125');
+
+
